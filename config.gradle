@@ -12,5 +12,17 @@ ext {
     dependencies = [
             'appcompat-v7': 'com.android.support:appcompat-v7:24.2.0',
             'design'      : 'com.android.support:design:24.2.0',
+
+            'butterknife' : 'com.jakewharton:butterknife:7.0.1',
+            'rxandroid'   : 'io.reactivex:rxandroid:1.2.1',
+            'rxjava'      : 'io.reactivex:rxjava:1.1.6',
+            'retrofit'    : 'com.squareup.retrofit2:retrofit:2.1.0',
+            'okhttp'      : 'com.squareup.okhttp3:okhttp:3.4.1',
+            'volley'      : 'com.android.volley:volley:1.0.0',
+            'picasso'     : 'com.squareup.picasso:picasso:2.5.2',
+            'glide'       : 'com.github.bumptech.glide:glide:3.7.0',
+            'eventbus'    : 'de.greenrobot:eventbus:3.0.0',
+            'gson'        : 'com.google.code.gson:gson:2.6.2',
+
     ]
 }
