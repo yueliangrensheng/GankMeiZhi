@@ -3,7 +3,6 @@ package com.yazao.lib;
 import android.app.Application;
 import android.util.DisplayMetrics;
 
-import com.yazao.news.lib.BuildConfig;
 import com.yazao.lib.constant.GlobalParams;
 import com.yazao.lib.net.NetChangeReceiverUtil;
 import com.yazao.lib.util.ActivityManager;

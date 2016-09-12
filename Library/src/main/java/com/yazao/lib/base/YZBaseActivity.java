@@ -1,6 +1,7 @@
 package com.yazao.lib.base;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -35,7 +36,7 @@ public abstract class YZBaseActivity extends AppCompatActivity {
         if (isNoStateBar()) {
 //			View doctorView =findViewById(android.R.id.content);
             View doctorView = getWindow().getDecorView();
-            doctorView.setSystemUiVisibility(View.INVISIBLE);
+            doctorView.setSystemUiVisibility(View.INVISIBLE);//隐藏状态栏同时Activity会伸展全屏显示
         }
         if (isFullScreen()) {
 	   		/*set it to be full screen*/
@@ -79,10 +80,15 @@ public abstract class YZBaseActivity extends AppCompatActivity {
         if (layoutID != 0) {
             setContentView(layoutID);
         } else {
-            throw new IllegalArgumentException("You must return a right ContentView Layout.");
+            throw new IllegalArgumentException("You must return a right ContentView Layout Id.");
         }
 
-        initViewsAndEvents();
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        initData();
     }
 
     protected abstract boolean isNoStateBar();
@@ -106,8 +112,9 @@ public abstract class YZBaseActivity extends AppCompatActivity {
     /**
      * init
      */
-    protected abstract void initViewsAndEvents();
+    protected abstract void initData();
 
+   /** Layout Id*/
     protected abstract int getContentViewLayoutID();
 
 
