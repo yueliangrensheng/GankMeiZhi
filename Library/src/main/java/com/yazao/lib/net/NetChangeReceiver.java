@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class NetChangeReceiver extends BroadcastReceiver {
 
-    public final static String CUSTOM_ANDROID_NET_CHANGE_ACTION = "com.yazao.news.lib.conn.CONNECTIVITY_CHANGE";
+    public final static String CUSTOM_ANDROID_NET_CHANGE_ACTION = "com.yazao.conn.CONNECTIVITY_CHANGE";
     public final static String ANDROID_NET_CHANGE_ACTION = "android.net.conn.CONNECTIVITY_CHANGE";
 
     private static boolean isNetAvailable = false;
